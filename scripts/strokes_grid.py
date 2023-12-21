@@ -4,7 +4,6 @@ import numpy as np
 
 def main(argv):
     argc = len(argv)
-    print(argc, "аргументы")
     if argc < 3:
         print("Usage:", argv[0], "x.txt N [M = N]")
     else:
@@ -33,10 +32,6 @@ def main(argv):
 
         with open(file, 'r') as inp:
             Nt = float(inp.readline())
-            print(Nt, "Nt")
-            print(Nu, "Nu")
-            print(Nv, "Nv")
-            print(Np, "Np")
             if Nt != Nu + Nv + Np:
                 print("incorrect size!")
                 return -1
